@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -25,9 +26,13 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
     justifyContent: 'flex-start'
   },
+  link: {
+    textDecoration: 'none',
+    color: 'inherit',
+  }
 }));
 
-export default Header = () => {
+export default () => {
   const classes = useStyles();
 
   return (
@@ -35,9 +40,9 @@ export default Header = () => {
       <AppBar position="static">
         <Toolbar className={classes.buttons}>
           <img className={classes.logo} src={logo} height="45" width="150" />
-          <Button color="inherit">My Story</Button>
-          <Button color="inherit">Resume</Button>
-          <Button color="inherit">Contact Me</Button>
+          <Button color="inherit"><Link to="/" className={classes.link}>My Story</Link></Button>
+          <Button color="inherit"><Link to="/resume" className={classes.link}>Resume</Link></Button>
+          <Button color="inherit"><Link to="/contactme" className={classes.link}>Contact Me</Link></Button>
         </Toolbar>
       </AppBar>
     </div>

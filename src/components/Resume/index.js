@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default Resume = () => {
+export default () => {
   return (
     <div>Resume</div>
   );

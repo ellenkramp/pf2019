@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ContactMe = () => {
+export default () => {
   return (
     <div>Contact Me</div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default MyStory = () => {
+export default () => {
   return (
     <div>My Story</div>
   );
